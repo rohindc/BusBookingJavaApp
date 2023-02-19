@@ -567,14 +567,14 @@ public class BookTicket extends javax.swing.JFrame {
                 Logger.getLogger(BookTicket.class.getName()).log(Level.SEVERE, null, ex);
             }
 //            pdf();
-            sendEmail(email);
+//            sendEmail(email);
 
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void sendEmail(String to) {
-        String email = "rohindc@gmail.com";
-        String pass = "7299virusact1";
+        String email = "";
+        String pass = "";
         String msg = "hello";//txtticket.getText();
         String sub = "Your Ticket";
 
