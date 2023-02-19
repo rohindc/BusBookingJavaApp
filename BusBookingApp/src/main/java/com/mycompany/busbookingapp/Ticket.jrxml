@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Ticket" pageWidth="504" pageHeight="252" orientation="Landscape" columnWidth="464" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8150e6ef-8311-4cfa-8bd8-f5e833679f50">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select booked.c_num as `Mobile no.`, booked.b_no as `Bus no.`, booked.seat, booked.date, cus_details.name from booked inner join cus_details on booked.c_num = cus_details.m_no]]>
+	</queryString>
+	<field name="Mobile no." class="java.lang.Integer"/>
+	<field name="Bus no." class="java.lang.Integer"/>
+	<field name="seat" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="149" y="0" width="162" height="38" uuid="0ca3e2f9-9cce-41bb-8517-a0e25f8d0589"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[BLUE BUS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="28" y="0" width="44" height="20" uuid="f1950a91-4447-48b5-ac77-f5a2f62b37fa"/>
+				<text><![CDATA[From :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="20" width="44" height="15" uuid="b335a21e-0d5d-4507-895a-03ad82300f85"/>
+				<text><![CDATA[To     :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="48" width="464" height="1" uuid="bb257d92-6e93-4b8f-9519-0c1822e5c06d"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="99" splitType="Stretch">
+			<staticText>
+				<reportElement x="96" y="0" width="53" height="20" uuid="31cb42d6-f1c7-442c-b234-46c344c98ec4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Seat no.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="0" width="44" height="20" uuid="c9df266b-8905-4a24-bee7-4b21f1d26f3f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Bus no,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="0" width="58" height="20" uuid="cce81350-fbd3-4198-8b32-faba7f19f643"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="100" height="20" uuid="c963aa53-40bd-4042-94cc-b15dfc4ddade"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Date of jurney]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="16" y="20" width="67" height="20" uuid="00836254-4f50-4d99-9790-8329c3894a4b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Bus no.}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="83" y="20" width="88" height="20" uuid="710e6652-b06e-4f19-841e-c845912cf874"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{seat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="171" y="20" width="126" height="20" uuid="bfdf29ee-a9cd-45a8-a47d-8b04847a87dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="297" y="20" width="154" height="20" uuid="8be568de-5d0a-49c6-8790-1d2ca72e8a62"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="58" width="464" height="1" uuid="69956bf0-9505-4f40-9404-d6b7c9f43631"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
