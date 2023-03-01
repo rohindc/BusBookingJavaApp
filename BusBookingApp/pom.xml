@@ -25,15 +25,19 @@
             <version>1.4</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/mail.jar/mail.jar -->
+        <!-- https://mvnrepository.com/artifact/jakarta.mail/jakarta.mail-api -->
         <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>Javax.mail</artifactId>
-            <version>1.6.0</version>
+            <groupId>jakarta.mail</groupId>
+            <artifactId>jakarta.mail-api</artifactId>
+            <version>2.1.1</version>
         </dependency>
-        <dependency>
-            <groupId>Activation</groupId>
-            <artifactId>JavaActivation</artifactId>
-            <version>1.1</version>
-        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.sun.mail/jakarta.mail -->
+<dependency>
+    <groupId>org.eclipse.angus</groupId>
+    <artifactId>jakarta.mail</artifactId>
+    <version>1.0.0</version>
+</dependency>
+
+
     </dependencies> 
 </project>
